@@ -9,7 +9,7 @@ import Foundation
 
 extension NSObject {
     /** Returns class description. Useful for identifiers.  */
-    public class var identifier: String {
+    @objc public class var identifier: String {
         return NSStringFromClass(self).components(separatedBy: ".").last!
     }
     
