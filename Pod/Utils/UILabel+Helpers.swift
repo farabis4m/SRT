@@ -12,9 +12,9 @@ extension UILabel{
     /** Width for current text in label */
     public var labelWidth: CGFloat {
         let rect = self.text?.boundingRect(with: CGSize(width: .greatestFiniteMagnitude, height: frame.size.height),
-                                      options: .usesLineFragmentOrigin,
-                                      attributes: [NSAttributedStringKey.font: font],
-                                      context: nil) ?? .zero
+                                           options: .usesLineFragmentOrigin,
+                                           attributes: [NSAttributedString.Key.font: font],
+                                           context: nil) ?? .zero
         return rect.size.width
     }
     
@@ -22,7 +22,7 @@ extension UILabel{
     public var labelHeight: CGFloat {
         let rect = self.text?.boundingRect(with: CGSize(width: frame.size.width, height: .greatestFiniteMagnitude),
                                            options: .usesLineFragmentOrigin,
-                                           attributes: [NSAttributedStringKey.font: font],
+                                           attributes: [NSAttributedString.Key.font: font],
                                            context: nil) ?? .zero
         return rect.size.height
     }
